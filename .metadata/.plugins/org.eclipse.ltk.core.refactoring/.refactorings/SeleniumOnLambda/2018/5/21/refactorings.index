@@ -1,0 +1,5 @@
+1526906959855	Delete element
+1526978849366	Rename method 'setJarS3Location'
+1526978855708	Rename method 'setS3LocationToStoreOutput'
+1526978865517	Rename method 'setTestToRun'
+1526978871034	Rename method 'setTestServerURL'

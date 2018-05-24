@@ -1,0 +1,110 @@
+package com;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.Status;
+import com.listeners.CountTotalTestsListener;
+import com.listeners.Retry;
+import com.listeners.TestNGThreadCountHolder;
+
+public class ExecuteLambdaTest {
+	
+	private static AtomicInteger concurrentTests = new AtomicInteger(0);
+
+	@Parameters({ "testQualifiedName" })
+	@BeforeTest
+	public void beforeTest(@Optional("") String testQualifiedName) {
+		this.testQualifiedName = testQualifiedName;
+		ExtentReportsLogger.startTest(testQualifiedName);
+	}
+	
+	@BeforeMethod
+	public void beforeMethod(){
+		System.out.println("Number of concurrent tests is: " + concurrentTests.incrementAndGet());
+		testIndexInSuite = countTestsInSuite.incrementAndGet();
+	}
+
+	@Test
+	public void test(final ITestContext testContext) {
+		String testsReportDir = getTestReportsDir(testContext);
+		String testName = extractTestName(testQualifiedName);
+		waitForTestRampUp();
+		System.out.println("Executing test: " + testName + " number: " + testIndexInSuite + " out of: " + CountTotalTestsListener.getTotalAmountOfTestsInSuite() + " from jar " + JAR_NAME + " on test server: " + BaseURL.getBaseUrl());
+		try {
+			new TestOnAWSLambdaInvoker().invoke(JAR_S3_LOCATION, DUDA_S3_BUCKET_URL + testsReportDir, testQualifiedName, BaseURL.getBaseUrl());
+		} finally {
+			testReportURL = PUBLIC_TEST_REPORT_URL + testsReportDir + "/" + ExtentReportsManager.getExtentReportFileName();
+			ExtentReportsLogger.logURL(testReportURL, "Report");
+		}
+	}
+
+	@AfterMethod(alwaysRun = true)
+	public void afterTest(ITestResult result) {
+		switch (result.getStatus()) {
+		case ITestResult.FAILURE:
+			ExtentReportsLogger.getTest().log(Status.FAIL, "Test " + result.getMethod().getMethodName() + " failed");
+			System.out.println(result.getTestContext().getName() + " finished. report: " + testReportURL);
+			break;
+		case ITestResult.SKIP:
+			ExtentReportsLogger.getTest().log(Status.WARNING, "Test " + result.getMethod().getMethodName() + " retry");
+			System.out.println(result.getTestContext().getName() + " finished. report: " + testReportURL);
+			break;
+		default:
+			ExtentReportsLogger.getTest().log(Status.PASS, "Test " + result.getMethod().getMethodName() + " passed");
+			break;
+		}
+		ExtentReportsLogger.endTest();
+		System.out.println("Number of concurrent tests is: " + concurrentTests.decrementAndGet());
+	}
+	
+	private static AtomicInteger countTestsInSuite = new AtomicInteger(0);
+	
+	private int testIndexInSuite = 0;
+	private String testQualifiedName;
+	private String testReportURL;
+	private static final String CURRENT_SUITE_REPORT_DIR = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date()) + "/";
+	private static final String S3_TEST_REPORT_DIR = "selenium-output/";
+	private static final String AUTOMATION_S3_BUCKET_NAME = "duda-selenium/";
+	private static final String DUDA_S3_BUCKET_URL = "s3://" + AUTOMATION_S3_BUCKET_NAME;
+	private static final String JAR_NAME = resolveJarName();
+	private static final String S3_WEBDRIVER_JAR_DIR = "jars/";
+	private static final String PUBLIC_TEST_REPORT_URL = "http://s3.amazonaws.com/" + AUTOMATION_S3_BUCKET_NAME;
+	private static final String JAR_S3_LOCATION = DUDA_S3_BUCKET_URL + S3_WEBDRIVER_JAR_DIR + JAR_NAME;
+
+	private void waitForTestRampUp() {
+		int testNGThreadCount = TestNGThreadCountHolder.getFirstXmlThreadCount();
+		testNGThreadCount = testNGThreadCount==0 ? 50 : testNGThreadCount;
+		try {
+			if (testIndexInSuite < testNGThreadCount)
+				Thread.sleep(10 * 1000 * (testIndexInSuite / 10));
+		} catch (InterruptedException e1) {
+		}
+	}
+	
+	private static String resolveJarName(){
+		return "test-branch.jar";
+	}
+	
+	private String getTestReportsDir(final ITestContext testContext){
+		String res = S3_TEST_REPORT_DIR + CURRENT_SUITE_REPORT_DIR + testQualifiedName + "-" + testIndexInSuite;
+		if (Retry.isTestRetried(testContext))
+			res = res + "-retry";
+		return res;
+	}
+	
+	private String extractTestName(String testQualifiedName){
+		return testQualifiedName.substring(testQualifiedName.lastIndexOf(".") + 1);
+	}
+
+}

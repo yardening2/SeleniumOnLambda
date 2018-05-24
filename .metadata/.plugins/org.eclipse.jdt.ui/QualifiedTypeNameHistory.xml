@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.relevantcodes.extentreports.ExtentTest"/>
+<fullyQualifiedTypeName name="com.relevantcodes.extentreports.ExtentReports"/>
+<fullyQualifiedTypeName name="com.aventstack.extentreports.ExtentTest"/>
+<fullyQualifiedTypeName name="com.aventstack.extentreports.Status"/>
+<fullyQualifiedTypeName name="com.aventstack.extentreports.MediaEntityBuilder"/>
+<fullyQualifiedTypeName name="com.aventstack.extentreports.ExtentReports"/>
+<fullyQualifiedTypeName name="com.aventstack.extentreports.reporter.ExtentHtmlReporter"/>
+<fullyQualifiedTypeName name="com.aventstack.extentreports.reporter.configuration.ChartLocation"/>
+<fullyQualifiedTypeName name="com.aventstack.extentreports.reporter.configuration.Theme"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.lambda.AWSLambda"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.lambda.model.InvokeResult"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.lambda.model.InvokeRequest"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.lambda.AWSLambdaClientBuilder"/>
+<fullyQualifiedTypeName name="com.amazonaws.retry.RetryPolicy"/>
+<fullyQualifiedTypeName name="com.amazonaws.auth.DefaultAWSCredentialsProviderChain"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.datatype.joda.JodaModule"/>
+<fullyQualifiedTypeName name="com.listeners.CountTotalTestsListener"/>
+<fullyQualifiedTypeName name="com.listeners.TestNGThreadCountHolder"/>
+<fullyQualifiedTypeName name="com.listeners.Retry"/>
+<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+<fullyQualifiedTypeName name="com.BaseURL"/>
+<fullyQualifiedTypeName name="com.ExtentReportsManager"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="com.FileHelper"/>
+<fullyQualifiedTypeName name="com.listeners.TestWithAWSLambdaListener"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="com.amazonaws.auth.AWSCredentialsProvider"/>
+</qualifiedTypeNameHistroy>

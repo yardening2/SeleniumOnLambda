@@ -1,0 +1,65 @@
+/**
+ * @author yarden
+ */
+package com;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+public class ExtentReportsLogger {
+
+	public static ExtentTest currentSuiteOfSuitesParentLogger;
+	
+	@SuppressWarnings("rawtypes")
+	private static ThreadLocal parentTest = new ThreadLocal();
+
+
+	public static synchronized ExtentTest getTest() {
+		return (ExtentTest) parentTest.get();
+	}
+
+	public static synchronized void endTest() {
+		try {
+			ExtentReportsManager.getReporter().flush();
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	public static synchronized void startTest(String testName) {
+		ExtentTest test = ExtentReportsManager.getReporter().createTest(testName);
+		parentTest.set(test);
+	}
+
+	public static synchronized void info(String text) {
+		try {
+			text = replaceHtmlCharactersWithPlainText(text);
+			getTest().log(Status.INFO, text);
+		} catch (Exception e) {
+		}
+	}
+
+	public static void error(String text) {
+		try {
+			text = replaceHtmlCharactersWithPlainText(text);
+			getTest().log(Status.INFO, text);
+		} catch (Exception e) {
+		}
+	}
+	
+	public static void logURL(String href, String linkText){
+		try {
+			getTest().log(Status.INFO, "<a href=\"" + href + "\" target=\"_blank\">" + linkText + "</a>");
+		} catch (Exception e) {
+		}
+	}
+
+	private static String replaceHtmlCharactersWithPlainText(String text) {
+		text = text.replaceAll("<", "&lt;");
+		text = text.replaceAll(">", "&gt;");
+		return text;
+	}
+
+}

@@ -1,0 +1,97 @@
+package com;
+
+import java.util.concurrent.TimeUnit;
+
+import org.testng.Assert;
+
+import com.amazonaws.ClientConfiguration;
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
+import com.amazonaws.retry.RetryPolicy;
+import com.amazonaws.retry.RetryPolicy.RetryCondition;
+import com.amazonaws.services.lambda.AWSLambda;
+import com.amazonaws.services.lambda.AWSLambdaClientBuilder;
+import com.amazonaws.services.lambda.model.InvokeRequest;
+import com.amazonaws.services.lambda.model.InvokeResult;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.joda.JodaModule;
+
+public class TestOnAWSLambdaInvoker {
+	
+	private final static int TEN_MIN_IN_MILLIS = (int)TimeUnit.MINUTES.toMillis(10);
+	private final static String lambdaFunctionName = "selenium";
+	private final static String lambdaRegion = "us-east-1";
+	private static AWSCredentialsProvider credentials = new DefaultAWSCredentialsProviderChain();
+	AWSLambda lambda;
+	InvokeRequest invokeRequest;
+	
+	public void invoke(String jarS3Location, String s3LocationToStoreOutput, String testToRun, String testServerURL){
+		AWSLambdaTestsData testDataSendToLambda = generateDataSendToLambda(jarS3Location, s3LocationToStoreOutput, testToRun, testServerURL);
+		InvokeResult invokeResult = invokeLambda(testDataSendToLambda);
+		if (isTestFailed(invokeResult)){
+			System.out.println("Test failed with following error: " + invokeResult.toString());
+			Assert.fail("Test: " + testToRun + " failed");
+		}
+	}
+	
+	private InvokeResult invokeLambda(AWSLambdaTestsData awsLambdaTestsData){
+		lambda = createLambdaObject();
+		invokeRequest = generateRequestData(awsLambdaTestsData);
+		return lambda.invoke(invokeRequest);
+	}
+	
+	private InvokeRequest generateRequestData(AWSLambdaTestsData testDataSendToLambda){
+		InvokeRequest invokeRequest = new InvokeRequest();
+		invokeRequest.setFunctionName(lambdaFunctionName);
+		setInvokeRequestTimeout(invokeRequest);
+		invokeRequest.setPayload(jsonToString(testDataSendToLambda));
+		return invokeRequest;
+	}
+	
+	private void setInvokeRequestTimeout(InvokeRequest invokeRequest){
+		invokeRequest.setSdkClientExecutionTimeout(TEN_MIN_IN_MILLIS);
+		invokeRequest.setSdkRequestTimeout(TEN_MIN_IN_MILLIS);
+	}
+	
+	private boolean isTestFailed(InvokeResult invokeResult){
+		try {
+			if (invokeResult.getPayload() != null)
+				return !new String(invokeResult.getPayload().array()).equals("true");
+			return !invokeResult.getStatusCode().equals(200);
+		} catch (Exception e) {
+			return true;
+		}
+	}
+	
+	private AWSLambda createLambdaObject(){
+		AWSLambdaClientBuilder clientBuilder = AWSLambdaClientBuilder.standard().withClientConfiguration(new ClientConfiguration()
+				.withSocketTimeout(TEN_MIN_IN_MILLIS)
+				.withRetryPolicy(new RetryPolicy(RetryCondition.NO_RETRY_CONDITION, null, 0, false))
+		);
+		clientBuilder.setCredentials(credentials);
+		clientBuilder.setRegion(lambdaRegion);
+		AWSLambda lambda = clientBuilder.build();
+		return lambda;
+	}
+	
+	private AWSLambdaTestsData generateDataSendToLambda(String jarS3Location, String s3LocationToStoreOutput, String testToRun, String testServerURL){
+		AWSLambdaTestsData testDataSendToLambda = new AWSLambdaTestsData().setJarS3Location(jarS3Location)
+				.setS3LocationToStoreOutput(s3LocationToStoreOutput).setTestToRun(testToRun).setTestServerURL(testServerURL);
+		return testDataSendToLambda;
+	}
+	
+	private static String jsonToString(Object obj) {
+        try {
+            return createObjectMapper().writeValueAsString(obj);
+        } catch (Exception e) {
+            throw e instanceof RuntimeException ? ((RuntimeException) e) : new RuntimeException(e);
+        }
+    }
+	
+	private static ObjectMapper createObjectMapper() {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.registerModule(new JodaModule());
+        return mapper;
+    }
+
+}

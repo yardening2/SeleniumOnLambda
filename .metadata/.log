@@ -1,0 +1,2154 @@
+!SESSION 2018-05-08 16:00:42.844 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.springframework.ide.eclipse.boot.dash 4 0 2018-05-08 16:00:44.497
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash [1086]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"] because it is exposed to package 'javax.xml.ws.handler' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"] and javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.0.20160611-RELEASE"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; osgi.identity="org.springframework.web"; type="osgi.bundle"; version:Version="4.3.0.20160611-RELEASE"]
+    import: (&(osgi.wiring.package=javax.xml.ws.handler)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws.handler
+  javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-08 16:01:26.710
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\yardening2'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2018-05-08 16:01:47.631
+!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-08 16:01:48.645
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-08 16:01:53.384
+!MESSAGE No profile found: default
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-08 16:01:53.415
+!MESSAGE Monitoring content of C:\Users\yardening2\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-08 16:01:53.530
+!MESSAGE AWS toolkit core plugin initialized after 4885 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-08 16:01:53.538
+!MESSAGE The current accountId is not found in the system. Switching to the default account.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-08 16:01:54.306
+!MESSAGE Initialized a new Cognito identity us-east-1:882755ef-8186-4870-a998-1541463a0498
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:03:58.041
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:03:58.044
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:05:58.449
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:05:58.452
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:05:59.721
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:05:59.723
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:06:01.072
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:06:01.074
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:06:09.869
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:06:09.872
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:06:43.315
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:06:43.318
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:06:44.607
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:06:44.609
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:06:51.947
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:06:51.951
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:07:21.022
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:07:21.024
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:07:26.711
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:07:26.713
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:07:37.249
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:07:37.252
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:07:40.430
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:07:40.433
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:08:08.980
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:08:08.982
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:08:14.467
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:08:14.468
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:08:16.590
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:08:16.593
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:08:19.667
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:08:19.669
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:08:33.856
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:08:33.857
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:09:12.704
+!MESSAGE The POM for com.relevantcodes:extentreports:jar:3.0.7 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:09:13.243
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:09:13.245
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:09:20.096
+!MESSAGE The POM for com.relevantcodes:extentreports:jar:3.0.7 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:09:20.604
+!MESSAGE The POM for com.relevantcodes:extentreports:jar:3.0.7 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:09:20.673
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:09:20.675
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:04.775
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:04.778
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:06.061
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:06.063
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:10.292
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:10.294
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:22.892
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:22.893
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:27.964
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:27.965
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:32.530
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:32.531
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:39.798
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:39.800
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:44.493
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:44.494
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:53.091
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:53.092
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:58.153
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:10:58.155
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:11:01.654
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:11:01.655
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:11:06.349
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:11:06.350
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:11:53.960
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:11:53.961
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:12:00.134
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:12:00.135
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:12:17.785
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:12:17.786
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:12:21.997
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:12:21.998
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:12:24.107
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:12:24.110
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:12:47.303
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:12:47.305
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:13:09.188
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:13:09.189
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:13:24.052
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:13:24.054
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:13:46.894
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:13:46.895
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:13:51.279
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:13:51.280
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:13:55.719
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:13:55.721
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:05.748
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:05.749
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:26.240
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:26.242
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:31.834
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:31.835
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:40.386
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:40.388
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:45.119
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:45.120
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:49.147
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:14:49.149
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:15:02.222
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:15:02.223
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:16:26.115
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:16:26.116
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:16:33.718
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:16:33.719
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:19:52.551
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:19:52.554
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:20:00.067
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:20:00.069
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:20:18.606
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:20:18.608
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:21:20.139
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:21:20.140
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:21:29.199
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:21:29.201
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:21:48.362
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:21:48.363
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:21:48.764
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:21:56.079
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:21:56.081
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:21:56.636
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:22:03.055
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:22:03.057
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:22:04.859
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:22:04.925
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:22:14.573
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:22:14.575
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:22:15.024
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:22:20.545
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:22:48.653
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:22:48.655
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:22:53.930
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:22:53.932
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:22:54.325
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:22:59.758
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:22:59.760
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:23:03.080
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:23:03.085
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-s3\1.11.141\aws-java-sdk-s3-1.11.141.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:23:03.121
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:23:03.126
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-s3\1.11.141\aws-java-sdk-s3-1.11.141.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:26:11.178
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:26:11.181
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:26:11.466
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:26:11.479
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-s3\1.11.141\aws-java-sdk-s3-1.11.141.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:26:12.230
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:26:12.246
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-s3\1.11.141\aws-java-sdk-s3-1.11.141.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:26:12.635
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:26:12.637
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:26:29.413
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:26:29.431
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-s3\1.11.141\aws-java-sdk-s3-1.11.141.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:27:23.622
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:27:23.623
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:27:29.139
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:27:29.140
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:27:40.475
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:27:40.476
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:28:17.969
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:28:17.970
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:28:26.990
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:28:26.991
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:28:39.814
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:28:39.816
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:29:07.172
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:29:07.175
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:29:10.008
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:29:10.009
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:29:14.965
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:29:14.966
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:29:37.201
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:29:37.202
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:29:56.551
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:29:56.552
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:34:27.842
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:34:27.844
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:34:29.430
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:34:29.667
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:34:29.669
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-05-08 16:34:39.511
+!MESSAGE Invalid ZIP archive: C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.141\aws-java-sdk-core-1.11.141.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:34:49.411
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:34:49.413
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:34:53.969
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:34:53.970
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:35:37.181
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:35:37.182
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:36:22.013
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:36:22.015
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:38:53.988
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:38:53.990
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:38:56.033
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:38:56.035
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:38:57.439
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:38:57.442
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:39:31.523
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:39:31.524
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:03.345
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:03.347
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:04.802
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:04.803
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:08.449
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:08.450
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:09.787
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:09.788
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:16.571
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:16.572
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:31.065
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:31.067
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:37.046
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:40:37.047
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:41:00.782
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:41:00.783
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:41:07.260
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:41:07.261
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:41:46.815
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:41:46.816
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:45:17.451
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:45:17.452
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:46:32.944
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:46:32.945
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:46:34.238
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:46:34.239
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:46:37.431
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:46:37.432
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:46:42.470
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:46:42.471
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:47:17.269
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:47:17.270
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:47:20.958
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:47:20.959
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:47:25.049
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:47:25.050
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:47:32.975
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:47:32.976
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:49:04.723
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:49:04.725
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:49:48.572
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:49:48.574
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:49:53.284
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:49:53.285
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:50:19.259
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:50:19.260
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:51:37.957
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:51:37.959
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:51:42.993
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:51:42.994
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:51:56.438
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:51:56.440
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:02.263
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:02.265
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:05.689
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:05.690
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:09.399
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:09.402
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:17.781
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:17.782
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:28.622
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:28.624
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:45.422
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:45.423
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:50.584
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:52:50.585
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:53:00.971
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:53:00.972
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:53:37.328
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:53:37.329
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:53:38.714
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:53:38.715
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:53:45.288
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:53:45.289
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:53:55.672
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:53:55.673
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:54:19.837
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:54:19.838
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:54:25.642
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:54:25.643
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:54:48.844
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:54:48.845
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:54:57.754
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:54:57.755
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:02.269
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:02.270
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:07.177
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:07.179
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:12.791
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:12.792
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:17.091
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:17.092
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:28.600
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:28.601
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:33.358
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:33.359
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:39.795
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:55:39.796
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:59:05.429
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:59:05.430
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:59:13.818
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:59:13.819
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:59:18.365
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:59:18.367
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:59:45.755
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 16:59:45.756
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:00:03.521
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:00:03.522
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:00:06.930
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:00:06.931
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:00:13.533
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:00:13.533
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:00:20.160
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:00:20.162
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:00:28.657
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:00:28.658
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:03:59.907
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:03:59.909
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:05:23.275
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:05:23.276
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:05:31.965
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:05:31.967
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:09:53.127
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:09:53.128
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:10:08.297
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:10:08.298
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:10:22.770
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:10:22.771
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:10:28.573
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:10:28.574
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:00.150
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:00.151
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:16.659
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:16.660
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:29.406
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:29.407
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:32.598
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:32.600
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:38.497
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:38.498
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:45.769
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:45.770
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:55.366
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:11:55.367
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:12:05.396
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:12:05.397
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:12:21.673
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:12:21.674
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:12:30.952
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:12:30.953
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:12:41.354
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:12:41.356
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:12:50.898
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:12:50.900
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.testng.eclipse 1 0 2018-05-08 17:12:58.541
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Program Files\eclipse\configuration\org.eclipse.osgi\1130\0\.cp\lib\testng-remote.jar C:\src\lambdaOpen\SeleniumOnLambda\target\test-classes C:\src\lambdaOpen\SeleniumOnLambda\target\classes C:\Users\yardening2\.m2\repository\org\testng\testng\6.11\testng-6.11.jar C:\Users\yardening2\.m2\repository\com\beust\jcommander\1.64\jcommander-1.64.jar C:\Users\yardening2\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar C:\Users\yardening2\.m2\repository\com\aventstack\extentreports\3.0.7\extentreports-3.0.7.jar C:\Users\yardening2\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar C:\Users\yardening2\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar C:\Users\yardening2\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar C:\Users\yardening2\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar C:\Users\yardening2\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.323\aws-java-sdk-core-1.11.323.jar C:\Users\yardening2\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar C:\Users\yardening2\.m2\repository\software\amazon\ion\ion-java\1.0.2\ion-java-1.0.2.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.6.7.1\jackson-databind-2.6.7.1.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.6.7\jackson-dataformat-cbor-2.6.7.jar C:\Users\yardening2\.m2\repository\joda-time\joda-time\2.8.1\joda-time-2.8.1.jar C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-lambda\1.11.323\aws-java-sdk-lambda-1.11.323.jar C:\Users\yardening2\.m2\repository\com\amazonaws\jmespath-java\1.11.323\jmespath-java-1.11.323.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.9.5\jackson-datatype-joda-2.9.5.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.5\jackson-core-2.9.5.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57934 -protocol json -d C:\src\lambdaOpen\SeleniumOnLambda\test-output C:\src\lambdaOpen\SeleniumOnLambda\src\test_runner.xml
+java -ea -classpath C:\Program Files\eclipse\configuration\org.eclipse.osgi\1130\0\.cp\lib\testng-remote.jar:C:\src\lambdaOpen\SeleniumOnLambda\target\test-classes:C:\src\lambdaOpen\SeleniumOnLambda\target\classes:C:\Users\yardening2\.m2\repository\org\testng\testng\6.11\testng-6.11.jar:C:\Users\yardening2\.m2\repository\com\beust\jcommander\1.64\jcommander-1.64.jar:C:\Users\yardening2\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar:C:\Users\yardening2\.m2\repository\com\aventstack\extentreports\3.0.7\extentreports-3.0.7.jar:C:\Users\yardening2\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar:C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar:C:\Users\yardening2\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar:C:\Users\yardening2\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar:C:\Users\yardening2\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.323\aws-java-sdk-core-1.11.323.jar:C:\Users\yardening2\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar:C:\Users\yardening2\.m2\repository\software\amazon\ion\ion-java\1.0.2\ion-java-1.0.2.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.6.7.1\jackson-databind-2.6.7.1.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.6.7\jackson-dataformat-cbor-2.6.7.jar:C:\Users\yardening2\.m2\repository\joda-time\joda-time\2.8.1\joda-time-2.8.1.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-lambda\1.11.323\aws-java-sdk-lambda-1.11.323.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\jmespath-java\1.11.323\jmespath-java-1.11.323.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.9.5\jackson-datatype-joda-2.9.5.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.5\jackson-core-2.9.5.jar org.testng.remote.RemoteTestNG -serport 57934 -protocol json -d C:\src\lambdaOpen\SeleniumOnLambda\test-output C:\src\lambdaOpen\SeleniumOnLambda\src\test_runner.xml
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:13:24.001
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:13:24.002
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.testng.eclipse 1 0 2018-05-08 17:13:27.009
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Program Files\eclipse\configuration\org.eclipse.osgi\1130\0\.cp\lib\testng-remote.jar C:\src\lambdaOpen\SeleniumOnLambda\target\test-classes C:\src\lambdaOpen\SeleniumOnLambda\target\classes C:\Users\yardening2\.m2\repository\org\testng\testng\6.11\testng-6.11.jar C:\Users\yardening2\.m2\repository\com\beust\jcommander\1.64\jcommander-1.64.jar C:\Users\yardening2\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar C:\Users\yardening2\.m2\repository\com\aventstack\extentreports\3.0.7\extentreports-3.0.7.jar C:\Users\yardening2\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar C:\Users\yardening2\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar C:\Users\yardening2\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar C:\Users\yardening2\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar C:\Users\yardening2\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.323\aws-java-sdk-core-1.11.323.jar C:\Users\yardening2\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar C:\Users\yardening2\.m2\repository\software\amazon\ion\ion-java\1.0.2\ion-java-1.0.2.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.6.7.1\jackson-databind-2.6.7.1.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.6.7\jackson-dataformat-cbor-2.6.7.jar C:\Users\yardening2\.m2\repository\joda-time\joda-time\2.8.1\joda-time-2.8.1.jar C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-lambda\1.11.323\aws-java-sdk-lambda-1.11.323.jar C:\Users\yardening2\.m2\repository\com\amazonaws\jmespath-java\1.11.323\jmespath-java-1.11.323.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.9.5\jackson-datatype-joda-2.9.5.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.5\jackson-core-2.9.5.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57949 -protocol json -d C:\src\lambdaOpen\SeleniumOnLambda\test-output C:\src\lambdaOpen\SeleniumOnLambda\src\test_runner.xml
+java -ea -classpath C:\Program Files\eclipse\configuration\org.eclipse.osgi\1130\0\.cp\lib\testng-remote.jar:C:\src\lambdaOpen\SeleniumOnLambda\target\test-classes:C:\src\lambdaOpen\SeleniumOnLambda\target\classes:C:\Users\yardening2\.m2\repository\org\testng\testng\6.11\testng-6.11.jar:C:\Users\yardening2\.m2\repository\com\beust\jcommander\1.64\jcommander-1.64.jar:C:\Users\yardening2\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar:C:\Users\yardening2\.m2\repository\com\aventstack\extentreports\3.0.7\extentreports-3.0.7.jar:C:\Users\yardening2\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar:C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar:C:\Users\yardening2\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar:C:\Users\yardening2\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar:C:\Users\yardening2\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.323\aws-java-sdk-core-1.11.323.jar:C:\Users\yardening2\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar:C:\Users\yardening2\.m2\repository\software\amazon\ion\ion-java\1.0.2\ion-java-1.0.2.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.6.7.1\jackson-databind-2.6.7.1.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.6.7\jackson-dataformat-cbor-2.6.7.jar:C:\Users\yardening2\.m2\repository\joda-time\joda-time\2.8.1\joda-time-2.8.1.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-lambda\1.11.323\aws-java-sdk-lambda-1.11.323.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\jmespath-java\1.11.323\jmespath-java-1.11.323.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.9.5\jackson-datatype-joda-2.9.5.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.5\jackson-core-2.9.5.jar org.testng.remote.RemoteTestNG -serport 57949 -protocol json -d C:\src\lambdaOpen\SeleniumOnLambda\test-output C:\src\lambdaOpen\SeleniumOnLambda\src\test_runner.xml
+
+!ENTRY org.testng.eclipse 1 0 2018-05-08 17:13:54.138
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Program Files\eclipse\configuration\org.eclipse.osgi\1130\0\.cp\lib\testng-remote.jar C:\src\lambdaOpen\SeleniumOnLambda\target\test-classes C:\src\lambdaOpen\SeleniumOnLambda\target\classes C:\Users\yardening2\.m2\repository\org\testng\testng\6.11\testng-6.11.jar C:\Users\yardening2\.m2\repository\com\beust\jcommander\1.64\jcommander-1.64.jar C:\Users\yardening2\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar C:\Users\yardening2\.m2\repository\com\aventstack\extentreports\3.0.7\extentreports-3.0.7.jar C:\Users\yardening2\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar C:\Users\yardening2\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar C:\Users\yardening2\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar C:\Users\yardening2\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar C:\Users\yardening2\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.323\aws-java-sdk-core-1.11.323.jar C:\Users\yardening2\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar C:\Users\yardening2\.m2\repository\software\amazon\ion\ion-java\1.0.2\ion-java-1.0.2.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.6.7.1\jackson-databind-2.6.7.1.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.6.7\jackson-dataformat-cbor-2.6.7.jar C:\Users\yardening2\.m2\repository\joda-time\joda-time\2.8.1\joda-time-2.8.1.jar C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-lambda\1.11.323\aws-java-sdk-lambda-1.11.323.jar C:\Users\yardening2\.m2\repository\com\amazonaws\jmespath-java\1.11.323\jmespath-java-1.11.323.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.9.5\jackson-datatype-joda-2.9.5.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.5\jackson-core-2.9.5.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57960 -protocol json -d C:\src\lambdaOpen\SeleniumOnLambda\test-output C:\src\lambdaOpen\SeleniumOnLambda\src\test_runner.xml
+java -ea -classpath C:\Program Files\eclipse\configuration\org.eclipse.osgi\1130\0\.cp\lib\testng-remote.jar:C:\src\lambdaOpen\SeleniumOnLambda\target\test-classes:C:\src\lambdaOpen\SeleniumOnLambda\target\classes:C:\Users\yardening2\.m2\repository\org\testng\testng\6.11\testng-6.11.jar:C:\Users\yardening2\.m2\repository\com\beust\jcommander\1.64\jcommander-1.64.jar:C:\Users\yardening2\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar:C:\Users\yardening2\.m2\repository\com\aventstack\extentreports\3.0.7\extentreports-3.0.7.jar:C:\Users\yardening2\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar:C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar:C:\Users\yardening2\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar:C:\Users\yardening2\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar:C:\Users\yardening2\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.323\aws-java-sdk-core-1.11.323.jar:C:\Users\yardening2\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar:C:\Users\yardening2\.m2\repository\software\amazon\ion\ion-java\1.0.2\ion-java-1.0.2.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.6.7.1\jackson-databind-2.6.7.1.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.6.7\jackson-dataformat-cbor-2.6.7.jar:C:\Users\yardening2\.m2\repository\joda-time\joda-time\2.8.1\joda-time-2.8.1.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-lambda\1.11.323\aws-java-sdk-lambda-1.11.323.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\jmespath-java\1.11.323\jmespath-java-1.11.323.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.9.5\jackson-datatype-joda-2.9.5.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.5\jackson-core-2.9.5.jar org.testng.remote.RemoteTestNG -serport 57960 -protocol json -d C:\src\lambdaOpen\SeleniumOnLambda\test-output C:\src\lambdaOpen\SeleniumOnLambda\src\test_runner.xml
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:22:31.579
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:22:31.580
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:22:54.305
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:22:54.306
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:23:18.622
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:23:18.623
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:23:42.439
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:23:42.440
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:23:48.881
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:23:48.882
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:03.912
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:03.913
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:11.315
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:11.316
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:32.375
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:32.376
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:35.101
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:35.102
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:39.979
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:39.980
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:44.414
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:24:44.415
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:25:02.065
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:25:02.066
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:25:55.484
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:25:55.485
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:25:58.602
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:25:58.603
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:26:18.399
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:26:18.400
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:26:22.754
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:26:22.755
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:26:29.322
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:26:29.323
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:26:39.201
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:26:39.202
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:01.373
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:01.374
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:09.803
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:09.804
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:26.788
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:26.789
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:33.971
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:33.972
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:44.486
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:44.487
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:46.508
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:27:46.509
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:09.418
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:09.420
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:14.680
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:14.682
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:20.611
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:20.612
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:24.250
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:24.252
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:31.102
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:31.103
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:44.311
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:44.312
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:47.374
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:47.375
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:55.003
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:28:55.004
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:29:09.920
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:29:09.921
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:29:12.037
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:29:12.038
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:29:32.950
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:29:32.951
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:29:43.919
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-08 17:29:43.920
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-05-09 10:21:58.417
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:283)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:186)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor149.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor149.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-09 10:21:58.418
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-09 10:22:02.190
+!MESSAGE No repository found at http://download.eclipse.org/tools/mylyn/update/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-09 10:22:11.582
+!MESSAGE No repository found at https://aws.amazon.com/eclips.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-05-09 10:22:59.228
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/tools/mylyn/update/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:283)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:186)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor149.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-09 10:22:59.228
+!MESSAGE No repository found at http://download.eclipse.org/tools/mylyn/update/.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:23:10.138
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.jar
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2018-05-09 10:23:10.141
+!MESSAGE Unable to read repository at http://www.objectaid.net/update.
+!STACK 0
+java.io.IOException: http://www.objectaid.net/update is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor149.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:23:46.585
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:24:00.754
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:24:17.510
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:24:31.144
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:24:45.457
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:24:59.124
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:25:18.412
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.xml
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:25:40.642
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.xml
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:26:05.411
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.xml
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:26:34.111
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.xml
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:26:58.798
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.xml.xz
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:27:00.931
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/compositeContent.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:27:16.403
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-09 10:27:32.069
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.jar
+!SESSION 2018-05-09 11:07:00.976 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.springframework.ide.eclipse.boot.dash 4 0 2018-05-09 11:07:03.297
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash [1086]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"] because it is exposed to package 'javax.xml.ws.handler' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"] and javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.0.20160611-RELEASE"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; osgi.identity="org.springframework.web"; type="osgi.bundle"; version:Version="4.3.0.20160611-RELEASE"]
+    import: (&(osgi.wiring.package=javax.xml.ws.handler)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws.handler
+  javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-09 11:07:13.427
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-09 11:07:16.187
+!MESSAGE Monitoring content of C:\Users\yardening2\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-09 11:07:16.527
+!MESSAGE AWS toolkit core plugin initialized after 3100 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-09 11:07:16.556
+!MESSAGE Found valid identity id cache us-east-1:882755ef-8186-4870-a998-1541463a0498
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-09 11:07:21.302
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\yardening2'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2018-05-09 11:07:27.253
+!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-09 11:07:58.095
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-09 11:07:58.098
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-05-16 10:00:21.909
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:283)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:186)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor78.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor78.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-16 10:00:21.912
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases-for-indigo/1.4/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-16 10:00:24.503
+!MESSAGE No repository found at http://download.eclipse.org/tools/mylyn/update/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-16 10:00:33.654
+!MESSAGE No repository found at https://aws.amazon.com/eclips.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2018-05-16 10:01:23.675
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/tools/mylyn/update/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:283)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:186)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor78.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2018-05-16 10:01:23.676
+!MESSAGE No repository found at http://download.eclipse.org/tools/mylyn/update/.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-05-16 10:01:40.594
+!MESSAGE Server returned lastModified <= 0 for http://www.objectaid.net/update/content.jar
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2018-05-16 10:01:40.600
+!MESSAGE Unable to read repository at http://www.objectaid.net/update.
+!STACK 0
+java.io.IOException: http://www.objectaid.net/update is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor78.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:46:36.956
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:46:36.960
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:47:25.761
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:47:25.764
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:48:04.269
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:48:04.271
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:48:23.982
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:48:23.984
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:49:20.331
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:49:20.333
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:50:53.858
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:50:53.864
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:51:03.810
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:51:03.813
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:51:36.126
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:51:36.131
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:02.820
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:02.823
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:06.441
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:06.445
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:07.704
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:07.706
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:10.973
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:10.975
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:14.932
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:14.933
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:19.792
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:19.793
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:22.353
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:22.357
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:27.530
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:27.533
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:35.157
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:35.159
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:40.751
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:40.754
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:42.339
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:52:42.343
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:54:12.646
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:54:12.648
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:54:19.169
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 15:54:19.171
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:01:46.442
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:01:46.444
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:01:54.527
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:01:54.528
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:02:04.140
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:02:04.142
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:02:16.057
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:02:16.059
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:02:31.673
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:02:31.675
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:02:38.247
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:02:38.248
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:03:49.829
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:03:49.830
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:04:22.888
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:04:22.890
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:04:28.568
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:04:28.569
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:04:31.947
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:04:31.949
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:06:15.905
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:06:15.906
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:06:51.305
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:06:51.306
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:11:26.767
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:11:26.768
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:11:37.913
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:11:37.915
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:14:40.168
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:14:40.169
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:15:49.445
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:15:49.447
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:16:22.262
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:16:22.264
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:16:34.991
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:16:34.992
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:16:41.400
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:16:41.402
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:17:21.301
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:17:21.302
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:17:30.299
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:17:30.301
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:18:32.094
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:18:32.095
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:18:38.016
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 16:18:38.018
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 17:29:37.058
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-21 17:29:37.059
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.testng.eclipse 1 0 2018-05-21 17:30:05.548
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Program Files\eclipse\configuration\org.eclipse.osgi\1130\0\.cp\lib\testng-remote.jar C:\src\lambdaOpen\SeleniumOnLambda\target\test-classes C:\src\lambdaOpen\SeleniumOnLambda\target\classes C:\Users\yardening2\.m2\repository\org\testng\testng\6.11\testng-6.11.jar C:\Users\yardening2\.m2\repository\com\beust\jcommander\1.64\jcommander-1.64.jar C:\Users\yardening2\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar C:\Users\yardening2\.m2\repository\com\aventstack\extentreports\3.0.7\extentreports-3.0.7.jar C:\Users\yardening2\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar C:\Users\yardening2\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar C:\Users\yardening2\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar C:\Users\yardening2\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar C:\Users\yardening2\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.323\aws-java-sdk-core-1.11.323.jar C:\Users\yardening2\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar C:\Users\yardening2\.m2\repository\software\amazon\ion\ion-java\1.0.2\ion-java-1.0.2.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.6.7.1\jackson-databind-2.6.7.1.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.6.7\jackson-dataformat-cbor-2.6.7.jar C:\Users\yardening2\.m2\repository\joda-time\joda-time\2.8.1\joda-time-2.8.1.jar C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-lambda\1.11.323\aws-java-sdk-lambda-1.11.323.jar C:\Users\yardening2\.m2\repository\com\amazonaws\jmespath-java\1.11.323\jmespath-java-1.11.323.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.9.5\jackson-datatype-joda-2.9.5.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.5\jackson-core-2.9.5.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52853 -protocol json -d C:\src\lambdaOpen\SeleniumOnLambda\test-output C:\src\lambdaOpen\SeleniumOnLambda\src\test_runner.xml
+java -ea -classpath C:\Program Files\eclipse\configuration\org.eclipse.osgi\1130\0\.cp\lib\testng-remote.jar:C:\src\lambdaOpen\SeleniumOnLambda\target\test-classes:C:\src\lambdaOpen\SeleniumOnLambda\target\classes:C:\Users\yardening2\.m2\repository\org\testng\testng\6.11\testng-6.11.jar:C:\Users\yardening2\.m2\repository\com\beust\jcommander\1.64\jcommander-1.64.jar:C:\Users\yardening2\.m2\repository\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar:C:\Users\yardening2\.m2\repository\com\aventstack\extentreports\3.0.7\extentreports-3.0.7.jar:C:\Users\yardening2\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar:C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver\3.3.0\mongodb-driver-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\mongodb\bson\3.3.0\bson-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\mongodb\mongodb-driver-core\3.3.0\mongodb-driver-core-3.3.0.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar:C:\Users\yardening2\.m2\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar:C:\Users\yardening2\.m2\repository\org\apache\httpcomponents\httpmime\4.5.2\httpmime-4.5.2.jar:C:\Users\yardening2\.m2\repository\org\jsoup\jsoup\1.9.2\jsoup-1.9.2.jar:C:\Users\yardening2\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-core\1.11.323\aws-java-sdk-core-1.11.323.jar:C:\Users\yardening2\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar:C:\Users\yardening2\.m2\repository\software\amazon\ion\ion-java\1.0.2\ion-java-1.0.2.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.6.7.1\jackson-databind-2.6.7.1.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.6.7\jackson-dataformat-cbor-2.6.7.jar:C:\Users\yardening2\.m2\repository\joda-time\joda-time\2.8.1\joda-time-2.8.1.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\aws-java-sdk-lambda\1.11.323\aws-java-sdk-lambda-1.11.323.jar:C:\Users\yardening2\.m2\repository\com\amazonaws\jmespath-java\1.11.323\jmespath-java-1.11.323.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.9.5\jackson-datatype-joda-2.9.5.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar:C:\Users\yardening2\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.5\jackson-core-2.9.5.jar org.testng.remote.RemoteTestNG -serport 52853 -protocol json -d C:\src\lambdaOpen\SeleniumOnLambda\test-output C:\src\lambdaOpen\SeleniumOnLambda\src\test_runner.xml
+!SESSION 2018-05-22 11:46:34.247 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.springframework.ide.eclipse.boot.dash 4 0 2018-05-22 11:46:37.358
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash [1086]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"] because it is exposed to package 'javax.xml.ws.handler' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"] and javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.0.20160611-RELEASE"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; osgi.identity="org.springframework.web"; type="osgi.bundle"; version:Version="4.3.0.20160611-RELEASE"]
+    import: (&(osgi.wiring.package=javax.xml.ws.handler)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws.handler
+  javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-22 11:47:00.577
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-22 11:47:06.076
+!MESSAGE Monitoring content of C:\Users\yardening2\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-22 11:47:06.197
+!MESSAGE AWS toolkit core plugin initialized after 5619 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-22 11:47:06.215
+!MESSAGE Found valid identity id cache us-east-1:882755ef-8186-4870-a998-1541463a0498
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-22 11:47:13.963
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\yardening2'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2018-05-22 11:47:16.124
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Connect to dev.eclipse.org:443 [dev.eclipse.org/198.41.30.200] failed: connect timed out. ; version: 1.100.0.v20160217-0435
+!STACK 0
+org.apache.http.conn.ConnectTimeoutException: Connect to dev.eclipse.org:443 [dev.eclipse.org/198.41.30.200] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:134)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:244)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	... 16 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-22 11:47:30.580
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-22 11:47:30.585
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-22 11:47:35.907
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-22 11:47:35.909
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ui 2 2 2018-05-22 11:47:38.023
+!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-22 11:47:45.687
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-22 11:47:45.690
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-22 11:47:51.222
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-22 11:47:51.224
+!MESSAGE Using platform encoding (Cp1255 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2018-05-24 11:49:53.335 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_171
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.springframework.ide.eclipse.boot.dash 4 0 2018-05-24 11:49:56.220
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.springframework.ide.eclipse.boot.dash [1086]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"] because it is exposed to package 'javax.xml.ws.handler' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"] and javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"] via two dependency chains.
+
+Chain 1:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.eclipse.core.runtime)
+     |
+    provide: osgi.wiring.bundle: org.eclipse.core.runtime
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.102.v20160118-1700"; singleton:="true"]
+
+Chain 2:
+  org.springframework.ide.eclipse.boot.dash [osgi.identity; osgi.identity="org.springframework.ide.eclipse.boot.dash"; type="osgi.bundle"; version:Version="3.8.4.201703310634-RELEASE"; singleton:="true"]
+    require: (osgi.wiring.bundle=org.springframework.web)
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="4.3.0.20160611-RELEASE"; osgi.wiring.bundle="org.springframework.web"
+  org.springframework.web [osgi.identity; osgi.identity="org.springframework.web"; type="osgi.bundle"; version:Version="4.3.0.20160611-RELEASE"]
+    import: (&(osgi.wiring.package=javax.xml.ws.handler)(version>=0.0.0))
+     |
+    export: osgi.wiring.package: javax.xml.ws.handler
+  javax.xml.ws [osgi.identity; osgi.identity="javax.xml.ws"; type="osgi.bundle"; version:Version="2.1.0.v200902101523"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-24 11:50:23.692
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-24 11:50:25.141
+!MESSAGE Monitoring content of C:\Users\yardening2\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-24 11:50:25.241
+!MESSAGE AWS toolkit core plugin initialized after 1549 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-05-24 11:50:25.254
+!MESSAGE Found valid identity id cache us-east-1:882755ef-8186-4870-a998-1541463a0498
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-24 11:50:32.059
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\yardening2'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2018-05-24 11:50:34.223
+!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)

@@ -1,0 +1,83 @@
+/**
+ * @author yarden
+ */
+package com;
+
+import java.io.IOException;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+
+public class ExtentReportsLogger {
+
+	public static boolean isSuiteOfSuites=false;
+	public static ExtentTest currentSuiteOfSuitesParentLogger;
+	
+	@SuppressWarnings("rawtypes")
+	private static ThreadLocal parentTest = new ThreadLocal();
+
+
+	public static synchronized ExtentTest getTest() {
+		return (ExtentTest) parentTest.get();
+	}
+
+	public static synchronized void endTest() {
+		try {
+			ExtentReportsManager.getReporter().flush();
+		} catch (Exception e) {
+			try {
+				ExtentReportsManager.getReporter().flush();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+				throw e1;
+			}
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	public static synchronized void startTest(String testName) {
+		if (!isSuiteOfSuites) {
+			startTest(testName, "");			
+		}else {
+			parentTest.set(currentSuiteOfSuitesParentLogger.createNode(testName));
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	public static synchronized void startTest(String testName, String desc) {
+		ExtentTest test = ExtentReportsManager.getReporter().createTest(testName);
+		parentTest.set(test);
+	}
+
+	public static synchronized void info(String text) {
+		try {
+			text = replaceHtmlCharactersWithPlainText(text);
+			getTest().log(Status.INFO, text);
+		} catch (Exception e) {
+		}
+	}
+
+	public static void error(String text) {
+		try {
+			text = replaceHtmlCharactersWithPlainText(text);
+			getTest().log(Status.INFO, text);
+		} catch (Exception e) {
+		}
+	}
+
+	public static void attachScreenshotError(String imagePath) {
+		try {
+			getTest().log(Status.INFO, "", MediaEntityBuilder.createScreenCaptureFromPath(imagePath).build());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static String replaceHtmlCharactersWithPlainText(String text) {
+		text = text.replaceAll("<", "&lt;");
+		text = text.replaceAll(">", "&gt;");
+		return text;
+	}
+
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="test runner" verbose="0" parallel="tests" thread-count="1">
+
+	<listeners>
+		<listener class-name="com.listeners.RetryMethodListener"></listener>
+		<listener class-name="com.listeners.TestNGThreadCountHolder"></listener>
+		<listener class-name="com.listeners.CountTotalTestsListener"></listener>
+	</listeners>
+
+	<test name="Simple test">
+		<parameter name='testQualifiedName' value='com.test.SimpleTest' />
+		<classes>
+			<class name="com.ExecuteLambdaTest">
+			</class>
+		</classes>
+	</test>
+
+</suite>
